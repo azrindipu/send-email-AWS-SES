@@ -34,13 +34,13 @@ public class EmailDto {
     @JsonProperty("email_subject")
     @NotBlank(message = ValidationMessage.EMAIL_SUBJECT_CAN_NOT_BE_EMPTY)
     @NotNull(message = ValidationMessage.EMAIL_SUBJECT_CAN_NOT_BE_NULL)
-    @ApiModelProperty(required = true, example = "zyx@gmail.com")
+    @ApiModelProperty(required = true, example = "Test subject")
     private String emailSubject;
 
     @JsonProperty("email_body")
     @NotBlank(message = ValidationMessage.EMAIL_BODY_CAN_NOT_BE_EMPTY)
     @NotNull(message = ValidationMessage.EMAIL_BODY_CAN_NOT_BE_NULL)
-    @ApiModelProperty(required = true, example = "zyx@gmail.com")
+    @ApiModelProperty(required = true, example = "Test body")
     private String emailBody;
 
 }
