@@ -45,11 +45,13 @@ public class SwaggerConfig {
     @Value("${swagger.metadata.licence.url}")
     private String licenceUrl;
 
+    private static final String basePackage = "com.azrin.email.controller";
+
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.azrin.email.controller"))
+                .apis(RequestHandlerSelectors.basePackage(this.basePackage))
                 .paths(any())
                 .build()
                 .apiInfo(apiInfo());
